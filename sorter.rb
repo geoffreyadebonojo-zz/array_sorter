@@ -1,6 +1,5 @@
 require 'json'
 require 'colorize'
-require 'pry'
 require_relative './command_line_output.rb'
 require_relative './argument_processor.rb'
 
@@ -51,7 +50,7 @@ class Sorter
   end
 
   def test_option
-    system("ruby ./test/sorter_test.rb")
+    system("ruby ./sorter_test.rb")
   end
 
   def params_option

@@ -1,6 +1,5 @@
 require "minitest/autorun"
-require_relative "../lib/sorter.rb"
-
+require_relative "../sorter.rb"
 
 class SorterTest < Minitest::Test
 
