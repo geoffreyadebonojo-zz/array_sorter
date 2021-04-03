@@ -22,4 +22,9 @@ class SorterTest < Minitest::Test
     result = Sorter.sorting_function(cmd_line_input)
     assert result.include?("Check how you entered the arguments")
   end
+  def test_missing_arg_message()
+    cmd_line_input = []
+    result = Sorter.sorting_function(cmd_line_input)
+    assert result.include?("Please enter an argument string")
+  end
 end

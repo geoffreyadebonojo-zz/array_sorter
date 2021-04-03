@@ -4,6 +4,7 @@ require 'pry'
 class Sorter
 
   def self.sorting_function(args)
+    return missing_args if args.empty?
     begin
       parse_input(args)
     rescue
@@ -35,13 +36,28 @@ class Sorter
     "[#{joined_arrays}]"
   end
 
-  # for incorrect input
+  # for incorrect inputs
+  def self.missing_args
+    """
+    Please enter an argument string:
+
+    #{acceptable_args_example}
+    """
+  end
+
   def self.error_message
-    '''
+    """
     --------------------------------------
     Check how you entered the arguments;
     please, no commas between arrays.
 
+    #{acceptable_args_example}
+    """
+
+  end
+
+  def self.acceptable_args_example
+    '''
     Acceptable (any number of arrays):
     Multiple strings => "[1,2,3]" "[2,3,4]"
     Single string => "[1,2,3] [2,3,4]"
