@@ -35,17 +35,24 @@ class Sorter
 
   def commands
     {
-      help:   "--help",
-      test:   "--test",
-      params: "--params"
+      help:      "--help",
+      test:      "--test",
+      params:    "--params",
+      github:    "--github",
+      dockerhub: "--dockerhub"
     }
   end
 
   def help_option
     """
-      #{commands[:help].green}             view help options
-      #{commands[:test].green}             run test suite
-      #{commands[:params].green}           view acceptable arguments
+    The array_sorter will sort your arrays for you. Here's some commands.
+
+      #{commands[:help].green}                view help options
+      #{commands[:test].green}                run test suite
+      #{commands[:params].green}              view acceptable arguments
+      #{commands[:github].green}              go to github reop
+      #{commands[:dockerhub].green}           go to dockerhub reop
+
     """
   end
 
@@ -55,6 +62,14 @@ class Sorter
 
   def params_option
     CommandLineOutput.acceptable_args_example
+  end
+
+  def github_option
+    system("open https://github.com/geoffreyadebonojo/array_sorter")
+  end
+
+  def dockerhub_option
+    system("open https://hub.docker.com/repository/docker/geoffadebonojo/array_sorter")
   end
 
 end
