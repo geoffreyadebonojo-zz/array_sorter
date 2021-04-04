@@ -66,12 +66,12 @@ class Sorter
 
   def github_option
     puts """
-    github repo: https://github.com/geoffreyadebonojo/array_sorter"""
+    github repo: https://github.com/geoffreyadebonojo/array_sorter""".green
   end
 
   def dockerhub_option
     puts """
-    dockerhub repo: https://hub.docker.com/repository/docker/geoffadebonojo/array_sorter"""
+    dockerhub repo: https://hub.docker.com/repository/docker/geoffadebonojo/array_sorter""".green
   end
 
 end
