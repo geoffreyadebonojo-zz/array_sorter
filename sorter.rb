@@ -1,6 +1,5 @@
 require 'json'
 require 'colorize'
-require 'pry'
 require_relative './command_line_output.rb'
 require_relative './argument_processor.rb'
 
