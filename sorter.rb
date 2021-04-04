@@ -1,5 +1,6 @@
 require 'json'
 require 'colorize'
+require 'pry'
 require_relative './command_line_output.rb'
 require_relative './argument_processor.rb'
 
@@ -65,11 +66,13 @@ class Sorter
   end
 
   def github_option
-    system("open https://github.com/geoffreyadebonojo/array_sorter")
+    puts """
+    github repo: https://github.com/geoffreyadebonojo/array_sorter"""
   end
 
   def dockerhub_option
-    system("open https://hub.docker.com/repository/docker/geoffadebonojo/array_sorter")
+    puts """
+    dockerhub repo: https://hub.docker.com/repository/docker/geoffadebonojo/array_sorter"""
   end
 
 end

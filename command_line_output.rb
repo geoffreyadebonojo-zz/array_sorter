@@ -1,4 +1,3 @@
-require 'pry'
 class CommandLineOutput
 
   def self.missing_args
