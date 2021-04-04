@@ -7,11 +7,11 @@ Copy the image from docker with:
 docker pull geoffadebonojo/array_sorter
 ```
 
-Or just run. Docker will pull it for you.
+Or just run a command and Docker will pull it for you.
 ```
 docker run geoffadebonojo/array_sorter --help
 ```
-for a helpful list of commands
+will give you a helpful list of commands.
 
 Or jump right in and start merging arrays!
 ```
